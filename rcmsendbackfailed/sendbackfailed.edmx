@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RCMProdDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CustomerAPICallDetails">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CallNo" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="CallDenoId" Type="bigint" />
+          <Property Name="UTR" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SerialNo" Type="smallint" />
+          <Property Name="CustomerUniqueId" Type="varchar" MaxLength="50" />
+          <Property Name="ClientCustAccountMasterID" Type="int" />
+          <Property Name="AccountId" Type="varchar" MaxLength="30" />
+          <Property Name="ClientCode" Type="varchar" MaxLength="500" />
+          <Property Name="PickupCode" Type="varchar" MaxLength="500" />
+          <Property Name="StoreCode" Type="varchar" MaxLength="500" />
+          <Property Name="HierarchyCode" Type="varchar" MaxLength="500" />
+          <Property Name="DivisionCode" Type="varchar" MaxLength="20" />
+          <Property Name="CustomerDeptCode" Type="varchar" MaxLength="500" />
+          <Property Name="SubDivisionCode" Type="varchar" MaxLength="500" />
+          <Property Name="SubCode" Type="varchar" MaxLength="500" />
+          <Property Name="Deno1000" Type="int" />
+          <Property Name="Deno2000" Type="int" />
+          <Property Name="Deno500" Type="int" />
+          <Property Name="Deno200" Type="int" />
+          <Property Name="Deno100" Type="int" />
+          <Property Name="Deno50" Type="int" />
+          <Property Name="Deno20" Type="int" />
+          <Property Name="Deno10" Type="int" />
+          <Property Name="DenoCoin10" Type="int" />
+          <Property Name="DenoOthers" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Deno5" Type="int" />
+          <Property Name="Deno2" Type="int" />
+          <Property Name="DepositSlipNo" Type="varchar" MaxLength="20" />
+          <Property Name="PISNo" Type="varchar" MaxLength="20" />
+          <Property Name="RTFNo" Type="varchar" MaxLength="20" />
+          <Property Name="ActualAmount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PickupAmont" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CashLimit" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CompanyCode" Type="varchar" MaxLength="10" />
+          <Property Name="IsMobileUpdate" Type="bit" />
+          <Property Name="ResponseStatus" Type="varchar" MaxLength="50" />
+          <Property Name="Response" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <EntityContainer Name="RCMProdDBModelStoreContainer">
+          <EntitySet Name="CustomerAPICallDetails" EntityType="Self.CustomerAPICallDetails" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RCMProdDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CustomerAPICallDetail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CallNo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="CallDenoId" Type="Int64" />
+          <Property Name="UTR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SerialNo" Type="Int16" />
+          <Property Name="CustomerUniqueId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ClientCustAccountMasterID" Type="Int32" />
+          <Property Name="AccountId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ClientCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="PickupCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="StoreCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="HierarchyCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DivisionCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerDeptCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SubDivisionCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SubCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Deno1000" Type="Int32" />
+          <Property Name="Deno2000" Type="Int32" />
+          <Property Name="Deno500" Type="Int32" />
+          <Property Name="Deno200" Type="Int32" />
+          <Property Name="Deno100" Type="Int32" />
+          <Property Name="Deno50" Type="Int32" />
+          <Property Name="Deno20" Type="Int32" />
+          <Property Name="Deno10" Type="Int32" />
+          <Property Name="DenoCoin10" Type="Int32" />
+          <Property Name="DenoOthers" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Deno5" Type="Int32" />
+          <Property Name="Deno2" Type="Int32" />
+          <Property Name="DepositSlipNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PISNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RTFNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ActualAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PickupAmont" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CashLimit" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CompanyCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="IsMobileUpdate" Type="Boolean" />
+          <Property Name="ResponseStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Response" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="RCMProdDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CustomerAPICallDetails" EntityType="Self.CustomerAPICallDetail" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RCMProdDBModelStoreContainer" CdmEntityContainer="RCMProdDBEntities">
+          <EntitySetMapping Name="CustomerAPICallDetails">
+            <EntityTypeMapping TypeName="RCMProdDBModel.CustomerAPICallDetail">
+              <MappingFragment StoreEntitySet="CustomerAPICallDetails">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CallNo" ColumnName="CallNo" />
+                <ScalarProperty Name="CallDenoId" ColumnName="CallDenoId" />
+                <ScalarProperty Name="UTR" ColumnName="UTR" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="CustomerUniqueId" ColumnName="CustomerUniqueId" />
+                <ScalarProperty Name="ClientCustAccountMasterID" ColumnName="ClientCustAccountMasterID" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="ClientCode" ColumnName="ClientCode" />
+                <ScalarProperty Name="PickupCode" ColumnName="PickupCode" />
+                <ScalarProperty Name="StoreCode" ColumnName="StoreCode" />
+                <ScalarProperty Name="HierarchyCode" ColumnName="HierarchyCode" />
+                <ScalarProperty Name="DivisionCode" ColumnName="DivisionCode" />
+                <ScalarProperty Name="CustomerDeptCode" ColumnName="CustomerDeptCode" />
+                <ScalarProperty Name="SubDivisionCode" ColumnName="SubDivisionCode" />
+                <ScalarProperty Name="SubCode" ColumnName="SubCode" />
+                <ScalarProperty Name="Deno1000" ColumnName="Deno1000" />
+                <ScalarProperty Name="Deno2000" ColumnName="Deno2000" />
+                <ScalarProperty Name="Deno500" ColumnName="Deno500" />
+                <ScalarProperty Name="Deno200" ColumnName="Deno200" />
+                <ScalarProperty Name="Deno100" ColumnName="Deno100" />
+                <ScalarProperty Name="Deno50" ColumnName="Deno50" />
+                <ScalarProperty Name="Deno20" ColumnName="Deno20" />
+                <ScalarProperty Name="Deno10" ColumnName="Deno10" />
+                <ScalarProperty Name="DenoCoin10" ColumnName="DenoCoin10" />
+                <ScalarProperty Name="DenoOthers" ColumnName="DenoOthers" />
+                <ScalarProperty Name="Deno5" ColumnName="Deno5" />
+                <ScalarProperty Name="Deno2" ColumnName="Deno2" />
+                <ScalarProperty Name="DepositSlipNo" ColumnName="DepositSlipNo" />
+                <ScalarProperty Name="PISNo" ColumnName="PISNo" />
+                <ScalarProperty Name="RTFNo" ColumnName="RTFNo" />
+                <ScalarProperty Name="ActualAmount" ColumnName="ActualAmount" />
+                <ScalarProperty Name="PickupAmont" ColumnName="PickupAmont" />
+                <ScalarProperty Name="CashLimit" ColumnName="CashLimit" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+                <ScalarProperty Name="IsMobileUpdate" ColumnName="IsMobileUpdate" />
+                <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+                <ScalarProperty Name="Response" ColumnName="Response" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
