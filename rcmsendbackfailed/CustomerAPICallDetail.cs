@@ -57,5 +57,6 @@ namespace rcmsendbackfailed
         public Nullable<bool> IsMobileUpdate { get; set; }
         public string ResponseStatus { get; set; }
         public string Response { get; set; }
+        public string CustomerCode { get; set; }
     }
 }

@@ -4,8 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="54237b4578e243f0b4fd70bd6198edd7" Name="Diagram1">
-        <EntityTypeShape EntityType="RCMProdDBModel.CustomerAPICallDetail" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="54237b4578e243f0b4fd70bd6198edd7" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="RCMProdDBModel.CustomerAPICallDetail" Width="2.25" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RCMProdDBModel.BusinessCallLog" Width="1.5" PointX="6.125" PointY="0.5" />
+        <EntityTypeShape EntityType="RCMProdDBModel.APILog" Width="1.5" PointX="8.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

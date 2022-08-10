@@ -26,5 +26,7 @@ namespace rcmsendbackfailed
         }
     
         public virtual DbSet<CustomerAPICallDetail> CustomerAPICallDetails { get; set; }
+        public virtual DbSet<BusinessCallLog> BusinessCallLogs { get; set; }
+        public virtual DbSet<APILog> APILogs { get; set; }
     }
 }
